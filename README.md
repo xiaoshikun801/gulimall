@@ -1,0 +1,2 @@
+# gulimall
+for test distribute
