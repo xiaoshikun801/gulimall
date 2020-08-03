@@ -1,13 +1,17 @@
 package com.example.gulimall.coupon;
 
-import org.junit.jupiter.api.Test;
+import com.example.gulimall.coupon.service.CouponService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class GulimallCouponApplicationTests {
 
-    @Test
-    void contextLoads() {
+    @Autowired
+    CouponService couponService;
+
+    public void contextLoads() {
+
     }
 
 }
