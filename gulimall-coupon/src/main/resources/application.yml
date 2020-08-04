@@ -19,5 +19,7 @@ mybatis-plus:
       id-type: auto
 server:
   port: 7001
-  servlet:
-    context-path: /gulimall-coupon
+#  servlet:
+#    context-path: /gulimall-coupon
+
+

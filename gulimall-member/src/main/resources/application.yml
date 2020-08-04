@@ -19,5 +19,5 @@ mybatis-plus:
       id-type: auto
 server:
   port: 8001
-  servlet:
-    context-path: /gulimall-member
+#  servlet:
+#    context-path: /gulimall-member
