@@ -1,20 +1,14 @@
 package com.example.gulimall.coupon.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.example.gulimall.coupon.entity.MemberPriceEntity;
-import com.example.gulimall.coupon.service.MemberPriceService;
 import com.example.common.utils.PageUtils;
 import com.example.common.utils.R;
+import com.example.gulimall.coupon.entity.MemberPriceEntity;
+import com.example.gulimall.coupon.service.MemberPriceService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
+import java.util.Map;
 
 
 /**
@@ -22,7 +16,7 @@ import com.example.common.utils.R;
  *
  * @author jx512337
  * @email jx512337@gmail.com
- * @date 2020-08-03 00:45:31
+ * @date 2020-05-22 19:35:30
  */
 @RestController
 @RequestMapping("coupon/memberprice")
@@ -34,6 +28,7 @@ public class MemberPriceController {
      * 列表
      */
     @RequestMapping("/list")
+    //@RequiresPermissions("coupon:memberprice:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = memberPriceService.queryPage(params);
 
@@ -45,6 +40,7 @@ public class MemberPriceController {
      * 信息
      */
     @RequestMapping("/info/{id}")
+    //@RequiresPermissions("coupon:memberprice:info")
     public R info(@PathVariable("id") Long id){
 		MemberPriceEntity memberPrice = memberPriceService.getById(id);
 
@@ -55,6 +51,7 @@ public class MemberPriceController {
      * 保存
      */
     @RequestMapping("/save")
+    //@RequiresPermissions("coupon:memberprice:save")
     public R save(@RequestBody MemberPriceEntity memberPrice){
 		memberPriceService.save(memberPrice);
 
@@ -65,6 +62,7 @@ public class MemberPriceController {
      * 修改
      */
     @RequestMapping("/update")
+    //@RequiresPermissions("coupon:memberprice:update")
     public R update(@RequestBody MemberPriceEntity memberPrice){
 		memberPriceService.updateById(memberPrice);
 
@@ -75,6 +73,7 @@ public class MemberPriceController {
      * 删除
      */
     @RequestMapping("/delete")
+    //@RequiresPermissions("coupon:memberprice:delete")
     public R delete(@RequestBody Long[] ids){
 		memberPriceService.removeByIds(Arrays.asList(ids));
 

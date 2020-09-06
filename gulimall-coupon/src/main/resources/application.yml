@@ -10,7 +10,15 @@ spring:
     nacos:
       config:
         server-addr: 127.0.0.1:8848
+#    sentinel:
+#      transport:
+#        #sentinel dashboard
+#        dashboard: localhost:8080
 
+
+#feign:
+#  sentinel:
+#    enabled: true
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
@@ -22,4 +30,10 @@ server:
 #  servlet:
 #    context-path: /gulimall-coupon
 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 

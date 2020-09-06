@@ -10,7 +10,18 @@ spring:
     nacos:
       config:
         server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        #配置sentinel dashboard地址
+        dashboard: localhost:8080
 
+#开启feign对sentinel的支持
+feign:
+  sentinel:
+    enabled: true
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
@@ -21,3 +32,14 @@ server:
   port: 11001
 #  servlet:
 #    context-path: /gulimall-ware
+
+logging:
+  level:
+    com.example.gulimall: debug
+
+#暴露所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

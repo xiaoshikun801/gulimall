@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@MapperScan("com.example.gulimall.coupon.dao")
+//@MapperScan("com.example.gulimall.coupon.dao")
 @EnableDiscoveryClient
 @SpringBootApplication
 public class GulimallCouponApplication {

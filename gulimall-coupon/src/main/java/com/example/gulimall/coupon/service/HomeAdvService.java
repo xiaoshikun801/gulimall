@@ -10,8 +10,8 @@ import java.util.Map;
  * 首页轮播广告
  *
  * @author jx512337
- * @email jx512337@gmail.com
- * @date 2020-08-03 00:45:31
+ * @email HeJieLin@gulimall.com
+ * @date 2020-05-22 19:35:30
  */
 public interface HomeAdvService extends IService<HomeAdvEntity> {
 

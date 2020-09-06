@@ -2,17 +2,12 @@ package com.example.gulimall.coupon.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
-import lombok.Data;
 
 /**
  * 首页专题表【jd首页下面很多专题，每个专题链接新的页面，展示专题商品信息】
- * 
- * @author jx512337
- * @email jx512337@gmail.com
- * @date 2020-08-03 00:45:31
  */
 @Data
 @TableName("sms_home_subject")
@@ -39,7 +34,7 @@ public class HomeSubjectEntity implements Serializable {
 	/**
 	 * 显示状态
 	 */
-	private Integer status;
+	private Boolean status;
 	/**
 	 * 详情连接
 	 */

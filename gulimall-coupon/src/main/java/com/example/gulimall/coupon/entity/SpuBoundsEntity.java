@@ -2,18 +2,14 @@ package com.example.gulimall.coupon.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
-import java.math.BigDecimal;
-import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 商品spu积分设置
  * 
- * @author jx512337
- * @email jx512337@gmail.com
- * @date 2020-08-03 00:45:31
  */
 @Data
 @TableName("sms_spu_bounds")

@@ -10,7 +10,22 @@ spring:
     nacos:
       config:
         server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        #配置sentinel dashboard地址
+        dashboard: localhost:8080
 
+  redis:
+    host: 192.168.56.10
+    port: 6379
+
+#开启feign对sentinel的支持
+feign:
+  sentinel:
+    enabled: true
+
+  session:
+    store-type: redis
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
@@ -21,3 +36,10 @@ server:
   port: 9002
 #  servlet:
 #    context-path: /gulimall-order
+
+#暴露所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
